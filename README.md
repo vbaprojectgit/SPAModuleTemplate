@@ -23,3 +23,9 @@ or with cruft https://github.com/cruft/cruft
   
   [4/4] module_name_module (modulnamesinglelowercase-module): // accept the dafult here
 
+
+Once created run:
+
+    npm i
+
+    npm run start:vite
