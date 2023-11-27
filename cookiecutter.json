@@ -1,0 +1,6 @@
+{
+  "moduleName": "Name",
+  "module_name": "{{ cookiecutter.moduleName + 'Module'}}",
+  "module_name_single_lowerCase": "name",
+  "module_name_module": "{{cookiecutter.module_name_single_lowerCase + '-module'}}"
+}

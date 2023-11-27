@@ -1,0 +1,52 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..522c58b 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -303,6 +303,20 @@ module.exports = function (webpackEnv) {
+       ],
+     },
+     resolve: {
++      fallback: {
++        buffer: require.resolve('buffer'),
++        crypto: require.resolve('crypto-browserify'),
++        stream: require.resolve('stream-browserify'),
++        util: require.resolve('util'),
++        path: require.resolve('path-browserify'),
++        http: require.resolve('stream-http'),
++        https: require.resolve('https-browserify'),
++        tty: require.resolve('tty-browserify'),
++        os: require.resolve('os-browserify/browser'),
++        zlib: require.resolve('browserify-zlib'),
++        'process/browser': require.resolve('process/browser'),
++        fs: false,
++      },
+       // This allows you to set a fallback for where webpack should look for modules.
+       // We placed these paths second because we want `node_modules` to "win"
+       // if there are any conflicts. This matches Node resolution mechanism.
+@@ -343,7 +357,7 @@ module.exports = function (webpackEnv) {
+           babelRuntimeEntry,
+           babelRuntimeEntryHelpers,
+           babelRuntimeRegenerator,
+-        ]),
++        ])
+       ],
+     },
+     module: {
+@@ -604,6 +618,9 @@ module.exports = function (webpackEnv) {
+       ].filter(Boolean),
+     },
+     plugins: [
++      new webpack.ProvidePlugin({
++        process: 'process/browser',
++      }),
+       // Generates an `index.html` file with the <script> injected.
+       new HtmlWebpackPlugin(
+         Object.assign(
+@@ -791,6 +808,6 @@ module.exports = function (webpackEnv) {
+     ].filter(Boolean),
+     // Turn off performance processing because we utilize
+     // our own hints via the FileSizeReporter
+-    performance: false,
++    performance: false
+   };
+ };

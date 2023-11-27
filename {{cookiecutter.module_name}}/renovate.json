@@ -1,0 +1,33 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "packageRules": [
+         {
+            "matchDepTypes": [
+                "devDependencies"
+            ],
+            "excludePackageNames": [
+                "web-platform"
+            ],
+            "enabled": false
+        },
+        {
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "excludePackageNames": [
+                "web-modules-common",
+                "web-platform"
+            ],
+            "enabled": false
+        },
+        {
+            "matchPackageNames": [
+                "web-modules-common",
+                "web-platform"
+            ],
+            "enabled": true,
+            "automerge": true,
+            "rangeStrategy": "bump"
+        }
+    ]
+}
