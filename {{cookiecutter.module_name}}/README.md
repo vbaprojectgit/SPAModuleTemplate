@@ -1,13 +1,13 @@
-# alarms-module
+# {{cookiecutter.module_name_module}}
 
 > Made with create-react-library
 
-[![NPM](https://img.shields.io/npm/v/alarms-module.svg)](https://www.npmjs.com/package/alarms-module) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/{{cookiecutter.module_name}}.svg)](https://www.npmjs.com/package/{{cookiecutter.module_name_single_lowerCase}}) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save alarms-module
+npm install --save {{cookiecutter.module_name_module}}
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save alarms-module
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'alarms-module'
-import 'alarms-module/dist/index.css'
+import MyComponent from '{{cookiecutter.module_name_module}}'
+import '{{cookiecutter.module_name_module}}/dist/index.css'
 
 class Example extends Component {
   render() {
