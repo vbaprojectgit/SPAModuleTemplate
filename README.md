@@ -15,9 +15,9 @@ or with cruft https://github.com/cruft/cruft
 
   @ All you need to input is:
 
-  [1/4] moduleName (Name): CapilalizedModuleName
+  [1/4] moduleName (Name): CapitalizedModuleName
   
-  [2/4] module_name (CapilalizedModuleNameModule): // accept the dafult here
+  [2/4] module_name (CapitalizedModuleNameModule): // accept the dafult here
 
   [3/4] module_name_single_lowerCase (name): modulnamesinglelowercase
   
